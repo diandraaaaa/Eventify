@@ -3,7 +3,6 @@ import { StyleSheet, View, Image } from 'react-native';
 import TextTitle from '../components/TextTitle';
 import Subtitle from '../components/Subtitle';
 import Button from '../components/Button';
-
 const OnboardingScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
@@ -14,16 +13,20 @@ const OnboardingScreen = ({ navigation }) => {
                     style={styles.image}
                     resizeMode="contain"
                 />
+                {/* Title Over the Image */}
+                <View style={styles.titleContainer}>
+                    <TextTitle text="Eventify" style={styles.title} />
+                </View>
             </View>
 
-            {/* Title */}
-            <TextTitle text="Eventify" />
-
             {/* Subtitle */}
-            <Subtitle text="Make your dream wedding a reality with ease. Eventify brings your vision to life, one detail at a time." />
+            <Subtitle
+                text="Make your dream wedding a reality with ease. Eventify brings your vision to life, one detail at a time."
+                style={styles.subtitle}
+            />
 
             {/* Button */}
-            <Button text="Continue" onPress={() => navigation.navigate('RegisterScreen')} />
+            <Button text="Continue" onPress={() => navigation.navigate('SignInScreen')} />
         </View>
     );
 };
@@ -36,14 +39,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     imageContainer: {
-        position: 'absolute',
-        top: 50,
-        right: 20,
-        opacity: 0.2,
-    },
-    image: {
+        position: 'relative',
         width: 300,
         height: 300,
+        alignItems: 'center',
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+    },
+    titleContainer: {
+        position: 'absolute',
+        top: '40%', // Adjust to position the title over the image
+        alignSelf: 'center',
     },
 });
 

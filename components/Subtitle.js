@@ -8,7 +8,7 @@ const Subtitle = ({ text }) => {
 const styles = StyleSheet.create({
     subtitle: {
         fontSize: 16,
-        color: '#CA94B7',
+        color: '#D979D9',
         textAlign: 'center',
         marginHorizontal: 20,
         marginVertical: 10,
