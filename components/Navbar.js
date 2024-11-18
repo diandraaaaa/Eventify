@@ -9,12 +9,12 @@ const NavBar = () => {
             <TouchableOpacity style={styles.iconContainer}>
                 <Image
                     source={require('../assets/menu-icon.png')} // replace with your actual menu icon path
-                    style={styles.icon}
+                    style={styles.iconMenu}
                 />
             </TouchableOpacity>
 
             {/* Title */}
-            <TextTitle text="Welcome" />
+            <TextTitle fontSize={30} text="Welcome" />
 
             {/* Navigation Icons */}
             <View style={styles.navContainer}>
@@ -60,16 +60,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#D3A1F2', // light pink gradient color
         padding: 20,
+        paddingTop: 60
     },
     iconContainer: {
         position: 'absolute',
         left: 20,
         top: 20,
     },
-    icon: {
+    iconMenu: {
         width: 30,
         height: 30,
-        tintColor: '#FFF', // white color for icons
+        tintColor: '#FFF',
+        position: 'absolute',
+        left: 10,
+        top: 55,
+    },
+    icon: {
+        width: 40,
+        height: 40,
+        tintColor: '#FFF',
     },
     navContainer: {
         flexDirection: 'row',

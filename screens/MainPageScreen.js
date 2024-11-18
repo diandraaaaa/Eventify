@@ -4,9 +4,12 @@ import Navbar from '../components/Navbar';
 
 export default function MainPageScreen({ navigation }) {
     return (
-        <View style={styles.container}>
-            <Navbar title="Welcome" />
-            <Image source={require('../assets/main_img.png')} style={styles.image} />
+        <View >
+            <Navbar title="Welcome"/>
+            <View>
+                <Image style={styles.container} source={require('../assets/main_img.png')} style={styles.image} />
+            </View>
+
         </View>
     );
 }

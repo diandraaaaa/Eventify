@@ -15,7 +15,7 @@ const OnboardingScreen = ({ navigation }) => {
                 />
                 {/* Title Over the Image */}
                 <View style={styles.titleContainer}>
-                    <TextTitle text="Eventify" style={styles.title} />
+                    <TextTitle fontSize={30} color={"#000"} text="Eventify" style={styles.title} />
                 </View>
             </View>
 

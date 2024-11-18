@@ -1,17 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
-const TextTitle = ({ text }) => {
-    return <Text style={styles.title}>{text}</Text>;
+const TextTitle = ({ text, fontSize = 12, color = '#fff' }) => {
+    return <Text style={[styles.title, { fontSize, color }]}>{text}</Text>;
 };
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 40,
         fontWeight: 'bold',
-        color: '#000',
         fontFamily: 'coral',
-        marginTop: 20,
+        marginVertical: 10,
     },
 });
 

@@ -11,7 +11,7 @@ export default function SignInScreen({ navigation }) {
     return (
         <View style={styles.container}>
             {/* Sign In Title */}
-            <TextTitle text="Sign In" style={styles.title} />
+            <TextTitle fontSize={30} color={"#000"} text="Sign In" style={styles.title} />
 
             {/* Username and Password Inputs */}
             <Input placeholder="Username" value={username} onChangeText={setUsername} style={styles.input} />

@@ -16,7 +16,7 @@ export default function RegisterScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <TextTitle text="Register" style={styles.title} />
+            <TextTitle fontSize={30} color={"#000"} text="Register" style={styles.title} />
 
             {/* Account Type Picker */}
             <Picker
