@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'; // Updated import
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
@@ -10,7 +10,7 @@ import SignInScreen from './screens/SignInScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import MainPageScreen from './screens/MainPageScreen';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator(); // Using native stack navigator
 
 export default function App() {
     // Load custom fonts

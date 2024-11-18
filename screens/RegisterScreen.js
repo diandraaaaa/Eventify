@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Picker, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Picker } from '@react-native-picker/picker';  // Update this import
 import Input from '../components/Input';
 import Button from '../components/Button';
 import TextTitle from '../components/TextTitle';

@@ -4,7 +4,7 @@ import TextTitle from '../components/TextTitle';
 import Subtitle from '../components/Subtitle';
 import Button from '../components/Button';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             {/* Background Image */}
@@ -23,7 +23,7 @@ const OnboardingScreen = () => {
             <Subtitle text="Make your dream wedding a reality with ease. Eventify brings your vision to life, one detail at a time." />
 
             {/* Button */}
-            <Button text="Continue" />
+            <Button text="Continue" onPress={() => navigation.navigate('RegisterScreen')} />
         </View>
     );
 };
