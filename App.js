@@ -5,9 +5,11 @@ import OnboardingScreen from './screens/OnboardingScreen';
 import SignInScreen from './screens/SignInScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import MainPageScreen from './screens/MainPageScreen';
+
 import GuestsListScreen from './screens/GuestsListScreen';
-// import ChecklistScreen from './screens/ChecklistScreen';
-// import BudgetScreen from './screens/BudgetScreen';
+import ChecklistScreen from './screens/ChecklistScreen';
+import BudgetScreen from './screens/BudgetScreen';
+import  SuppliersScreen from './screens/SuppliersScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,8 +22,10 @@ export default function App() {
                 <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
                 <Stack.Screen name="MainPageScreen" component={MainPageScreen} />
                 <Stack.Screen name="GuestsListScreen" component={GuestsListScreen} />
-                {/*<Stack.Screen name="GuestListScreen" component={GuestListScreen} />*/}
-                {/*<Stack.Screen name="BudgetScreen" component={BudgetScreen} />*/}
+                <Stack.Screen name="ChecklistScreen" component={ChecklistScreen} />
+                <Stack.Screen name="BudgetScreen" component={BudgetScreen} />
+                <Stack.Screen name="SuppliersScreen" component={SuppliersScreen} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
