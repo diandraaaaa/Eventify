@@ -11,10 +11,10 @@ export default function GuestlistScreen() {
 
     return (
         <View style={styles.container}>
-            <Image
+            {/*<Image
                 source={require('./../assets/guestlist-icon.png')}
                 style={styles.icon}
-            />
+            />*/}
             <Text style={styles.title}>Guest List</Text>
             <FlatList
                 data={guests}

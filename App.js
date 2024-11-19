@@ -20,7 +20,7 @@ export default function App() {
                 <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
                 <Stack.Screen name="MainPageScreen" component={MainPageScreen} />
                 <Stack.Screen name="GuestsListScreen" component={GuestsListScreen} />
-                {/*<Stack.Screen name="ChecklistScreen" component={ChecklistScreen} />*/}
+                {/*<Stack.Screen name="GuestListScreen" component={GuestListScreen} />*/}
                 {/*<Stack.Screen name="BudgetScreen" component={BudgetScreen} />*/}
             </Stack.Navigator>
         </NavigationContainer>
