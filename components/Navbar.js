@@ -1,53 +1,31 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import TextTitle from './TextTitle';
+import { View, TouchableOpacity, StyleSheet, Image, Text } from 'react-native';
 
-const NavBar = () => {
+const Navbar = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            {/* Menu Icon */}
             <TouchableOpacity style={styles.iconContainer}>
                 <Image
-                    source={require('../assets/menu-icon.png')} // replace with your actual menu icon path
+                    source={require('../assets/menu-icon.png')}
                     style={styles.iconMenu}
                 />
             </TouchableOpacity>
 
-            {/* Title */}
-            <TextTitle fontSize={30} text="Welcome" />
-
-            {/* Navigation Icons */}
             <View style={styles.navContainer}>
-                <TouchableOpacity style={styles.navItem}>
-                    <Image
-                        source={require('../assets/checklist-icon.png')} // replace with actual path
-                        style={styles.icon}
-                    />
-                    <TextTitle text="Checklist" />
+                <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('MainPageScreen')}>
+                    <Text style={styles.navText}>Home</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.navItem}>
-                    <Image
-                        source={require('./../assets/guestlist-icon.png')} // replace with actual path
-                        style={styles.icon}
-                    />
-                    <TextTitle text="Guest List" />
+                <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('GuestsListScreen')}>
+                    <Text style={styles.navText}>Guest List</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.navItem}>
-                    <Image
-                        source={require('../assets/budget-icon.png')} // replace with actual path
-                        style={styles.icon}
-                    />
-                    <TextTitle text="Budget" />
+                <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('ChecklistScreen')}>
+                    <Text style={styles.navText}>Checklist</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.navItem}>
-                    <Image
-                        source={require('../assets/suppliers-icon.png')} // replace with actual path
-                        style={styles.icon}
-                    />
-                    <TextTitle text="Suppliers" />
+                <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('BudgetScreen')}>
+                    <Text style={styles.navText}>Budget</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -58,9 +36,9 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#D3A1F2', // light pink gradient color
+        backgroundColor: '#D3A1F2',
         padding: 20,
-        paddingTop: 60
+        paddingTop: 60,
     },
     iconContainer: {
         position: 'absolute',
@@ -70,14 +48,6 @@ const styles = StyleSheet.create({
     iconMenu: {
         width: 30,
         height: 30,
-        tintColor: '#FFF',
-        position: 'absolute',
-        left: 10,
-        top: 55,
-    },
-    icon: {
-        width: 40,
-        height: 40,
         tintColor: '#FFF',
     },
     navContainer: {
@@ -89,6 +59,11 @@ const styles = StyleSheet.create({
     navItem: {
         alignItems: 'center',
     },
+    navText: {
+        color: '#FFF',
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
 });
 
-export default NavBar;
+export default Navbar;
