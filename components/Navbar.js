@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#D3A1F2', // light pink gradient color
+        backgroundColor: '#E06CD3', // light pink gradient color
         padding: 20,
         paddingTop: 60,
     },
